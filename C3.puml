@@ -1,0 +1,31 @@
+@startuml C3
+
+title BarberFlow - Component Diagram
+
+package "Back-End" {
+
+component LoginController
+component ClienteController
+component AgendamentoController
+
+component LoginService
+component ClienteService
+component AgendamentoService
+
+component Repository
+
+LoginController --> LoginService
+ClienteController --> ClienteService
+AgendamentoController --> AgendamentoService
+
+LoginService --> Repository
+ClienteService --> Repository
+AgendamentoService --> Repository
+
+}
+
+database MySQL
+
+Repository --> MySQL
+
+@enduml
