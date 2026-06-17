@@ -1,0 +1,28 @@
+@startuml C2
+
+title BarberFlow - Container Diagram
+
+actor Cliente
+actor Barbeiro
+
+node "Front-End\nReact" as Frontend
+
+node "Back-End\nSpring Boot" as Backend
+
+database "MySQL" as MySQL
+database "MongoDB" as MongoDB
+database "Redis" as Redis
+
+node "WhatsApp API" as WhatsApp
+
+Cliente --> Frontend : Utiliza sistema
+Barbeiro --> Frontend : Gerencia agenda
+
+Frontend --> Backend : REST API
+
+Backend --> MySQL : Usuários e Agendamentos
+Backend --> MongoDB : Notificações
+Backend --> Redis : Cache
+Backend --> WhatsApp : Envio de mensagens
+
+@enduml
