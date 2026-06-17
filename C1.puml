@@ -1,0 +1,17 @@
+@startuml C1
+
+title BarberFlow - Context Diagram
+
+actor Cliente
+actor Barbeiro
+
+rectangle "BarberFlow" as Sistema {
+}
+
+rectangle "WhatsApp API" as WhatsApp
+
+Cliente --> Sistema : Agenda serviços
+Barbeiro --> Sistema : Gerencia horários
+Sistema --> WhatsApp : Envia notificações
+
+@enduml
