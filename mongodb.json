@@ -1,0 +1,10 @@
+{
+  "_id": "001",
+  "cliente": {
+    "id": 1,
+    "nome": "Carlos Silva"
+  },
+  "mensagem": "Seu horário está agendado para amanhã às 14h",
+  "status": "enviada",
+  "dataEnvio": "2026-06-16T13:00:00"
+}
